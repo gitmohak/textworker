@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.arlight::after{
+  filter: invert(0);
+}
+
+.ardark::after{
+  filter: invert(1);
+}

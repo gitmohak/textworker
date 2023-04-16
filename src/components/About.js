@@ -9,7 +9,7 @@ export default function About(props) {
                 <h1 className={`text-${myColor} my-4`}>About</h1>
                 <div className={`accordion-item bg-${props.mode} text-${myColor}`} >
                     <h2 className="accordion-header" id="headingOne" >
-                        <button className={`accordion-button text-${myColor} bg-${props.mode}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                        <button className={`accordion-button text-${myColor} bg-${props.mode} ar${props.mode}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
                             <strong>TextWorker is stylish</strong>
                         </button>
                     </h2>
@@ -21,7 +21,7 @@ export default function About(props) {
                 </div>
                 <div className={`accordion-item bg-${props.mode} text-${myColor}`} >
                     <h2 className="accordion-header" id="headingTwo">
-                        <button className={`accordion-button collapsed text-${myColor} bg-${props.mode}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
+                        <button className={`accordion-button collapsed text-${myColor} bg-${props.mode} ar${props.mode}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
                             <strong>Text is valuable</strong>
                         </button>
                     </h2>
@@ -33,7 +33,7 @@ export default function About(props) {
                 </div>
                 <div className={`accordion-item bg-${props.mode} text-${myColor}`} >
                     <h2 className="accordion-header" id="headingThree">
-                        <button className={`accordion-button collapsed text-${myColor} bg-${props.mode}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+                        <button className={`accordion-button collapsed text-${myColor} bg-${props.mode} ar${props.mode}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
                             <strong>Origin of Text</strong>
                         </button>
                     </h2>
