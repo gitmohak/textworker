@@ -62,11 +62,11 @@ export default function Textform(props) {
                     <h1 className="my-3">{props.title}</h1>
                     <textarea className={`form-control mb-3 text-${props.modeValue === "light" ? "dark" : "light"} bg-${props.modeValue}`} rows="10" value={text} onChange={myOnChange}></textarea>
 
-                    <button className={`btn btn-${props.mode2}`} onClick={myUpFunc}>Convert to Uppercase</button>
-                    <button className={`btn btn-${props.mode2} ms-3`} onClick={myLoFunc}>Convert to Lowercase</button>
-                    <button className={`btn btn-${props.mode2} ms-3`} onClick={myClear}>Clear</button>
+                    <button className={`btn btn-${props.mode2} ms-3 my-2`} onClick={myUpFunc} disabled={wordLength()=== 0}>Convert to Uppercase</button>
+                    <button className={`btn btn-${props.mode2} ms-3 my-2`} onClick={myLoFunc} disabled={wordLength()=== 0}>Convert to Lowercase</button>
+                    <button className={`btn btn-${props.mode2} ms-3 my-2`} onClick={myClear} disabled={wordLength()=== 0}>Clear</button>
 
-                    <button className={`btn btn-${props.mode2} ms-3`} onClick={myReplace}>Replace Text</button><br />
+                    <button className={`btn btn-${props.mode2} ms-3 my-2`} onClick={myReplace} disabled={wordLength()=== 0}>Replace Text</button><br />
                     <input id="replaceFrom" type="text" className={`mt-3 py-1 text-${props.modeValue === "light" ? "dark" : "light"} bg-${props.modeValue}`} hidden placeholder="From" />
                     <input id="replaceTo" type="text" className={`ms-3 py-1 text-${props.modeValue === "light" ? "dark" : "light"} bg-${props.modeValue}`} hidden placeholder="To" />
                     <button id="replaceBtn" className="btn btn-success ms-3" onClick={myReplaceAction} hidden>Replace</button>
@@ -79,7 +79,7 @@ export default function Textform(props) {
                 <p>{0.008 * wordLength()} minutes read</p>
 
                 <h2>Preview</h2>
-                <p>{wordLength()>0 ? text : "Write something in the above box to preview"}</p>
+                <p>{wordLength()>0 ? text : "Nothing to preview!"}</p>
             </div>
         </>
     );

@@ -1,8 +1,11 @@
 import './App.css';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from "./components/Alert";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -95,11 +98,18 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar title="TextWorker" color={color} modeValue={mode} tMode={toggleMode} />
+    <BrowserRouter>
+      <Navbar title="TextWorker" color={color} link="About" modeValue={mode} tMode={toggleMode} />
       <Alert alert={alert} />
-      <TextForm title="Enter the text to analyse" modeValue={mode} mode2={mode2} showAlert={showAlert} />
-    </>
+
+      <Routes>
+        <Route exact path="/">
+          <Route index element={<TextForm title="Count words, Convert case, Replace Text" modeValue={mode} mode2={mode2} showAlert={showAlert} />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
+        </Route>
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 
